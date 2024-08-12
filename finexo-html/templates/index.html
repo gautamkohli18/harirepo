@@ -11,12 +11,12 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <link rel="shortcut icon" href="static/images/favicon.png" type="">
  
   <title> ErFi - Find Smart. Solve Smart </title>
  
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
  
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -25,12 +25,12 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
  
   <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="static/css/font-awesome.min.css" rel="stylesheet" />
  
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="static/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="static/css/responsive.css" rel="stylesheet" />
  
 </head>
  
@@ -48,7 +48,7 @@
                     loop
                     autoplay>
                     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> -->
-        <img src="images/image (8) (1).png" alt="Hero Background Image">
+        <img src="static/images/image (8) (1).png" alt="Hero Background Image">
       </div>
     </div>
  
@@ -56,11 +56,13 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a href="{{ url_for('index') }}">
             <span>
-              ErFi
+            ErFi
             </span>
           </a>
+            
+
  
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class=""> </span>
@@ -69,10 +71,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  ">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a href="{{ url_for('index') }}"> Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html"> About</a>
+                <a href="{{ url_for('index') }}"> About </a>
               </li>
               <form class="form-inline">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
@@ -193,7 +195,7 @@
           <div class="col-md-4 ">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s1.png" alt="Service 1">
+                <img src="static/images/s1.png" alt="Service 1">
               </div>
               <div class="detail-box">
                 <h5>
@@ -202,16 +204,15 @@
                 <p>
                   Navigate through here to find the list of annotators using a single prompt.
                 </p>
-                <a href="singleprompt1.html">
-                  Explore More
-                </a>
+                <a href="{{ url_for('single_prompt') }}">Explore More</a>
+
               </div>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s2.png" alt="Service 2">
+                <img src="static/images/s2.png" alt="Service 2">
               </div>
               <div class="detail-box">
                 <h5>
@@ -220,16 +221,14 @@
                 <p>
                   You can find the errors of an entire batch by uploading the Production and QA batch sheets here.
                 </p>
-                <a href="">
-                  Find Now
-                </a>
+                <a href="{{ url_for('sheetfind') }}">Find Now</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s3.png" alt="Service 3">
+                <img src="static/images/s3.png" alt="Service 3">
               </div>
               <div class="detail-box">
                 <h5>
@@ -238,9 +237,7 @@
                 <p>
                   If you want to verify a list of errors, you can find 'n' number of prompts here.
                 </p>
-                <a href="">
-                  Search now
-                </a>
+                <a href="{{ url_for('multiprompt') }}">Search now</a>
               </div>
             </div>
           </div>
@@ -313,7 +310,7 @@
       <div class="why_container">
         <div class="box">
           <div class="img-box">
-            <img src="images/w1.png" alt="Why Choose Us 1">
+            <img src="static/images/w1.png" alt="Why Choose Us 1">
           </div>
           <div class="detail-box">
             <h5>
@@ -325,7 +322,7 @@
         </div>
         <div class="box">
           <div class="img-box">
-            <img src="images/w2.png" alt="Why Choose Us 2">
+            <img src="static/images/w2.png" alt="Why Choose Us 2">
           </div>
           <div class="detail-box">
             <h5>
@@ -337,7 +334,7 @@
         </div>
         <div class="box">
           <div class="img-box">
-            <img src="images/w3.png" alt="Why Choose Us 3">
+            <img src="static/images/w3.png" alt="Why Choose Us 3">
           </div>
           <div class="detail-box">
             <h5>
@@ -412,7 +409,7 @@
   <!-- owl slider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <!-- custom js -->
-  <script src="js/custom.js"></script>
+  <script src="static/js/custom.js"></script>
  
 </body>
  
